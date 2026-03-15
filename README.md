@@ -1,54 +1,51 @@
-# README Template
+# Project: Forecasting Approach Evaluation and Recommendation
 
-Below is a template provided for use when building your README file for students.
-
-# Project Title
-
-Project description goes here.
+Your VP of Sales projected $4.1M in monthly revenue by December 2026 — 18% year-over-year growth. The data engineering team found bugs in the original data that inflated recent figures. They've handed you clean data. Your job: figure out what the numbers actually say.
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+Open `starter/starter.ipynb` and work through all four phases.
 
 ### Dependencies
 
 ```
-Examples here
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+statsmodels>=0.14
+darts>=0.41
+scipy>=1.11
+scikit-learn>=1.3
 ```
 
 ### Installation
 
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
-
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
+```bash
+pip install pandas numpy matplotlib statsmodels darts scipy scikit-learn
 ```
 
 ## Project Instructions
 
-This section should contain all the student deliverables for this project.
+Work through the notebook in order:
 
-## Built With
+1. **Phase 1: Baseline Forecasts** — naive, moving average, linear trend
+2. **Phase 2: Classical Models** — ARIMA, SARIMAX with diagnostics and prediction intervals
+3. **Phase 3: Modern Models** — N-BEATS (neural) and Chronos-2 (foundation model) via Darts
+4. **Phase 4: Comparison and Recommendation** — comparison table + written recommendation
 
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
+### Deliverables
 
-Include all items used to build project.
+1. Completed notebook with all phases implemented
+2. Comparison table showing all models, December 2026 forecasts, prediction intervals, and accuracy metrics
+3. At least three charts: baseline comparison, classical model forecasts with intervals, modern model forecasts
+4. Written recommendation (500-1000 words) answering:
+   - What is the realistic range for December 2026 revenue?
+   - What should the company plan for instead of $4.1M?
+   - Which forecasting approach would you recommend for ongoing use, and why?
+
+## Data
+
+- `data/revenue.csv` — 60 months of monthly revenue (January 2021 through December 2025), cleaned by the data engineering team
 
 ## License
 
